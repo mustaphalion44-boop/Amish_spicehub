@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Amish Spice HUB | 100% Natural Ghanaian Spices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #1a1209;
+      color: #2e241b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Animated background with woman holding money */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('https://images.unsplash.com/photo-1588702547923-09c8f1c6b2e5?q=80&w=2070&auto=format&fit=crop') center center / cover no-repeat;
+      animation: subtleZoom 18s infinite alternate ease-in-out;
+      filter: brightness(0.35) sepia(0.2);
+    }
+    @keyframes subtleZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+
+    .luxury-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background-color: rgba(255, 252, 248, 0.92);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      min-height: 500px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
+                  url('https://images.unsplash.com/photo-1604881991720-f91a94c4a2e4?q=80&w=2070&auto=format&fit=crop') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fef9e7;
+      border-bottom: 2px solid #d4b68a;
+    }
+    .hero-overlay {
+      background: rgba(20, 15, 10, 0.4);
+      backdrop-filter: blur(3px);
+      padding: 2.5rem 3rem;
+      border-radius: 2px;
+      max-width: 800px;
+      margin: 1rem;
+      border: 1px solid rgba(212, 182, 138, 0.5);
+    }
+    .title-main {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.2rem, 8vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #fae3bc;
+      text-shadow: 2px 4px 10px rgba(0,0,0,0.6);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .title-sub {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      color: #eedbba;
+      border-top: 1px solid #c7a16b;
+      border-bottom: 1px solid #c7a16b;
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      margin-top: 1rem;
+    }
+    .hero-contact {
+      margin-top: 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 300;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      color: #f5e7d3;
+      background: rgba(10, 8, 6, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      backdrop-filter: blur(5px);
+    }
+    .admin-access {
+      position: fixed;
+      top: 25px;
+      right: 30px;
+      z-index: 999;
+    }
+    .admin-btn {
+      background: rgba(30, 20, 10, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid #c9aa7a;
+      color: #f3e1c2;
+      padding: 0.7rem 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: #2b1e12;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .admin-btn:hover {
+      background: #c9aa7a;
+      color: #1a1209;
+    }
+
+    .brand-strip {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1.5rem 1rem;
+      background: rgba(245, 237, 225, 0.9);
+      border-bottom: 1px solid #d9c3a6;
+      flex-wrap: wrap;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #3e2e1f;
+      text-transform: uppercase;
+    }
+
+    /* Horizontal scroll sections */
+    .scroll-section {
+      padding: 2.5rem 1.5rem;
+    }
+    .brand-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #3b2b1a;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #b48b4b;
+      padding-bottom: 0.3rem;
+    }
+    .horizontal-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 1rem 0.5rem 1.5rem;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #b48b4b #f0e3d0;
+    }
+    .horizontal-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+    .horizontal-scroll::-webkit-scrollbar-track {
+      background: #f0e3d0;
+      border-radius: 10px;
+    }
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+      background: #b48b4b;
+      border-radius: 10px;
+    }
+
+    .product-card {
+      flex: 0 0 240px;
+      background: #ffffff;
+      border: 1px solid #e7d7bf;
+      padding: 1.5rem 1.2rem 1.8rem;
+      text-align: center;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 2px;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+      border-color: #c9aa7a;
+    }
+    .product-img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+      background: #f4ede3;
+    }
+    .product-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #3e2e1f;
+      margin: 0.4rem 0;
+      letter-spacing: 0.5px;
+    }
+    .price-tag {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #b48b4b;
+      margin: 0.4rem 0 0.6rem;
+    }
+    .product-desc {
+      font-size: 0.8rem;
+      color: #5f4e3c;
+      font-style: italic;
+    }
+
+    .admin-panel {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .admin-modal {
+      background: #fdf8f0;
+      max-width: 850px;
+      width: 95%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      border: 2px solid #b4945a;
+      box-shadow: 0 30px 50px rgba(0,0,0,0.5);
+    }
+    .admin-modal h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.8rem;
+    }
+    .admin-section {
+      margin-bottom: 2.2rem;
+      border-bottom: 1px dashed #d4b68a;
+      padding-bottom: 1.5rem;
+    }
+    .price-edit-row, .image-edit-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddccb0;
+      padding: 0.7rem 0;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .price-edit-row span, .image-edit-row span {
+      font-weight: 600;
+      flex: 2;
+      min-width: 130px;
+    }
+    .price-input, .image-input {
+      padding: 0.5rem;
+      border: 1px solid #c9aa7a;
+      background: #fffef9;
+    }
+    .update-btn, .delete-btn, .add-product-btn {
+      background: #3b2b1a;
+      color: #f3e1c2;
+      border: none;
+      padding: 0.4rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-left: 0.3rem;
+    }
+    .delete-btn {
+      background: #8b3a3a;
+      color: #ffe9e9;
+    }
+    .add-product-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .add-product-form input {
+      padding: 0.6rem;
+      border: 1px solid #c9aa7a;
+      background: #fffef9;
+    }
+    .close-admin {
+      background: transparent;
+      border: 1px solid #3b2b1a;
+      padding: 0.6rem 1.8rem;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .footer {
+      background: #2b1e12;
+      color: #dac29c;
+      padding: 2.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      .product-card {
+        flex: 0 0 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="animated-bg"></div>
+<div class="luxury-container">
+  <div class="admin-access">
+    <button class="admin-btn" id="openAdminBtn">ADMIN</button>
+  </div>
+
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1 class="title-main">Amish Spice HUB</h1>
+      <div class="title-sub">Pure · Natural · Ghanaian</div>
+      <div class="hero-contact">
+        <span>📍 Nima, Accra</span>
+        <span>📞 +233 55 551 6609</span>
+        <span>💬 +233 50 739 2725</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="brand-strip">
+    <span>Kivo</span> <span>Remie</span> <span>SAMU</span> <span>Sankofa</span> <span>Maggi</span> <span>Crown</span>
+  </div>
+
+  <main id="productDisplay"></main>
+
+  <footer class="footer">
+    <p>© Amish Spice HUB — Nima, Accra | 100% Natural Range | No MSG, No Salt in Kivo products</p>
+    <p style="margin-top:0.5rem;">WhatsApp: +233 50 739 2725 · Call: +233 55 551 6609</p>
+  </footer>
+</div>
+
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-modal">
+    <h3>Administrator · Manage Products</h3>
+    <div class="admin-section">
+      <h4 style="margin-bottom:1rem;">Update Prices, Images & Delete</h4>
+      <div id="adminProductList"></div>
+    </div>
+    <div class="admin-section">
+      <h4 style="margin-bottom:1rem;">Add New Product</h4>
+      <div class="add-product-form">
+        <input type="text" id="newName" placeholder="Product Name">
+        <input type="text" id="newBrand" placeholder="Brand (Kivo, Remie, etc.)">
+        <input type="text" id="newPrice" placeholder="Price (GH₵ 25.00)">
+        <input type="text" id="newDesc" placeholder="Short description">
+        <input type="text" id="newImage" placeholder="Image URL">
+        <button class="add-product-btn" id="addProductBtn">Add Product</button>
+      </div>
+    </div>
+    <button class="close-admin" id="closeAdminBtn">Close Panel</button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const defaultProducts = [
+      { id: 1, brand: "Kivo", name: "Natural Curry Plus (16 spices + rosemary)", price: "GH₵ 28.00", desc: "Blend of 16 spices & rosemary", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd0585?q=80&w=1974&auto=format&fit=crop" },
+      { id: 2, brand: "Kivo", name: "Natural Hot Pepper Powder", price: "GH₵ 18.00", desc: "Pure heat, no additives", img: "https://images.unsplash.com/photo-1589187832031-d4f1c9c2f29b?q=80&w=1974&auto=format&fit=crop" },
+      { id: 3, brand: "Kivo", name: "Natural Ginger Powder", price: "GH₵ 22.00", desc: "100% ginger root", img: "https://images.unsplash.com/photo-1615484477778-9a8b2f9b2b1e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 4, brand: "Kivo", name: "Natural Stew Spice", price: "GH₵ 25.00", desc: "Rich stew blend", img: "https://images.unsplash.com/photo-1599909547581-0b1b1e4b4c2e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 5, brand: "Kivo", name: "Natural Soup Spices", price: "GH₵ 24.00", desc: "Aromatic soup mix", img: "https://images.unsplash.com/photo-1597318181405-4c1d5c4e8b7c?q=80&w=1974&auto=format&fit=crop" },
+      { id: 6, brand: "Kivo", name: "Ginger, Garlic & Onion Powder", price: "GH₵ 26.00", desc: "Trio blend", img: "https://images.unsplash.com/photo-1615485290382-1e1b2b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 7, brand: "Kivo", name: "Natural Rosemary", price: "GH₵ 20.00", desc: "Aromatic herb", img: "https://images.unsplash.com/photo-1601493700888-3b5e7f5e5e5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 8, brand: "Kivo", name: "Hot Shito (shrimp-based)", price: "GH₵ 32.00", desc: "Spicy shrimp condiment", img: "https://images.unsplash.com/photo-1563379925-4b4e7b4e8b7c?q=80&w=1974&auto=format&fit=crop" },
+      { id: 9, brand: "Remie", name: "Fried Rice Seasoning Powder", price: "GH₵ 15.00", desc: "West African fried rice", img: "https://images.unsplash.com/photo-1603073163308-9653c2e9b3f0?q=80&w=1974&auto=format&fit=crop" },
+      { id: 10, brand: "Remie", name: "Chicken Seasoning Powder", price: "GH₵ 16.00", desc: "Perfect poultry blend", img: "https://images.unsplash.com/photo-1617196034796-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 11, brand: "Remie", name: "Stew Seasoning Powder", price: "GH₵ 17.00", desc: "Rich stew flavor", img: "https://images.unsplash.com/photo-1598103442097-8b9f2b9b2b1e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 12, brand: "Remie", name: "Jollof Rice Seasoning Powder", price: "GH₵ 18.00", desc: "Iconic Jollof taste", img: "https://images.unsplash.com/photo-1604329760661-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 13, brand: "Remie", name: "Mixed Spices Seasoning Powder", price: "GH₵ 19.00", desc: "All-purpose mix", img: "https://images.unsplash.com/photo-1596633800-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 14, brand: "Remie", name: "Shito Seasoning Powder", price: "GH₵ 21.00", desc: "Shito dry mix", img: "https://images.unsplash.com/photo-1600585154340-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 15, brand: "Remie", name: "All Purpose Seasoning Powder", price: "GH₵ 20.00", desc: "Universal seasoning", img: "https://images.unsplash.com/photo-1593642632559-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 16, brand: "Remie", name: "Goat Seasoning Powder", price: "GH₵ 22.00", desc: "For goat meat", img: "https://images.unsplash.com/photo-1603360946369-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 17, brand: "SAMU", name: "Spice Bag (mixed spices)", price: "GH₵ 30.00", desc: "Assorted bag", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd0585?q=80&w=1974&auto=format&fit=crop" },
+      { id: 18, brand: "SAMU", name: "Ginger & Garlic Blend", price: "GH₵ 24.00", desc: "Two roots blend", img: "https://images.unsplash.com/photo-1615484477778-9a8b2f9b2b1e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 19, brand: "SAMU", name: "Goat Spice", price: "GH₵ 23.00", desc: "Goat meat special", img: "https://images.unsplash.com/photo-1603360946369-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 20, brand: "SAMU", name: "Stew & Jollof", price: "GH₵ 26.00", desc: "Stew and Jollof combo", img: "https://images.unsplash.com/photo-1604329760661-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 21, brand: "SAMU", name: "Yaaji (Spicy Khebab Pepper)", price: "GH₵ 19.00", desc: "Khebab pepper", img: "https://images.unsplash.com/photo-1589187832031-d4f1c9c2f29b?q=80&w=1974&auto=format&fit=crop" },
+      { id: 22, brand: "SAMU", name: "Black Pepper", price: "GH₵ 17.00", desc: "Pure black pepper", img: "https://images.unsplash.com/photo-1597318181405-4c1d5c4e8b7c?q=80&w=1974&auto=format&fit=crop" },
+      { id: 23, brand: "SAMU", name: "Turmeric Powder", price: "GH₵ 20.00", desc: "Golden spice", img: "https://images.unsplash.com/photo-1615485290382-1e1b2b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 24, brand: "Sankofa", name: "Natural Spices (5g sachet strip)", price: "GH₵ 5.00", desc: "Sachet strip", img: "https://images.unsplash.com/photo-1601493700888-3b5e7f5e5e5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 25, brand: "Maggi", name: "Standard Stock Cubes", price: "GH₵ 8.00", desc: "Classic cubes", img: "https://images.unsplash.com/photo-1603073163308-9653c2e9b3f0?q=80&w=1974&auto=format&fit=crop" },
+      { id: 26, brand: "Onga Maggi", name: "Flavored Seasoning Powder", price: "GH₵ 9.00", desc: "Various flavors", img: "https://images.unsplash.com/photo-1598103442097-8b9f2b9b2b1e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 27, brand: "Crown Spice", name: "Crown Mixed Spice", price: "GH₵ 14.00", desc: "Local mixture", img: "https://images.unsplash.com/photo-1596633800-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 28, brand: "Adja Spice", name: "Adja Local Spice Blend", price: "GH₵ 12.00", desc: "Vendor special", img: "https://images.unsplash.com/photo-1600585154340-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 29, brand: "Sister Spice", name: "Sister Spice Mix", price: "GH₵ 13.00", desc: "Local vendor", img: "https://images.unsplash.com/photo-1603360946369-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 30, brand: "Seeds", name: "Sesame Seeds (Black & White)", price: "GH₵ 10.00", desc: "Nutty flavor", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd0585?q=80&w=1974&auto=format&fit=crop" },
+      { id: 31, brand: "Seeds", name: "Fennel Seeds", price: "GH₵ 11.00", desc: "Mild liquorice", img: "https://images.unsplash.com/photo-1615484477778-9a8b2f9b2b1e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 32, brand: "Seeds", name: "Cumin Seeds", price: "GH₵ 12.00", desc: "Earthy & warm", img: "https://images.unsplash.com/photo-1597318181405-4c1d5c4e8b7c?q=80&w=1974&auto=format&fit=crop" },
+      { id: 33, brand: "Seeds", name: "Coriander Seeds", price: "GH₵ 10.00", desc: "Citrusy, earthy", img: "https://images.unsplash.com/photo-1615485290382-1e1b2b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 34, brand: "Seeds", name: "Fenugreek Seeds", price: "GH₵ 9.00", desc: "Maple-like", img: "https://images.unsplash.com/photo-1601493700888-3b5e7f5e5e5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 35, brand: "Seeds", name: "Mustard Seeds", price: "GH₵ 8.00", desc: "Pungent", img: "https://images.unsplash.com/photo-1603073163308-9653c2e9b3f0?q=80&w=1974&auto=format&fit=crop" },
+      { id: 36, brand: "Seeds", name: "Chia Seeds", price: "GH₵ 15.00", desc: "Nutritional", img: "https://images.unsplash.com/photo-1598103442097-8b9f2b9b2b1e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 37, brand: "Seeds", name: "Flaxseed", price: "GH₵ 13.00", desc: "Often ground", img: "https://images.unsplash.com/photo-1596633800-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" },
+      { id: 38, brand: "Seeds", name: "Vitex Seed (local aromatic)", price: "GH₵ 14.00", desc: "Aromatic seed", img: "https://images.unsplash.com/photo-1600585154340-2e1b1b0b5c5e?q=80&w=1974&auto=format&fit=crop" }
+    ];
+
+    const STORAGE_KEY = 'amish_spice_data_v2';
+    
+    function loadData() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        } catch (e) {}
+      }
+      return JSON.parse(JSON.stringify(defaultProducts));
+    }
+
+    let productData = loadData();
+
+    function saveData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(productData));
+    }
+
+    function renderProducts() {
+      const main = document.getElementById('productDisplay');
+      if (!main) return;
+      
+      const brands = [...new Set(productData.map(p => p.brand))];
+      let html = '';
+      
+      brands.forEach(brand => {
+        const items = productData.filter(p => p.brand === brand);
+        if (items.length === 0) return;
+        html += `<div class="scroll-section"><h2 class="brand-heading">${brand}</h2><div class="horizontal-scroll">`;
+        items.forEach(item => {
+          html += `
+            <div class="product-card">
+              <img src="${item.img}" alt="${item.name}" class="product-img" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1596040033229-a9821ebd0585?q=80&w=1974&auto=format&fit=crop';">
+              <h3 class="product-title">${item.name}</h3>
+              <div class="price-tag">${item.price}</div>
+              <p class="product-desc">${item.desc || ''}</p>
+            </div>
+          `;
+        });
+        html += `</div></div>`;
+      });
+      main.innerHTML = html;
+    }
+
+    function renderAdminPanel() {
+      const adminList = document.getElementById('adminProductList');
+      if (!adminList) return;
+      
+      let html = '';
+      productData.forEach(item => {
+        html += `
+          <div style="border:1px solid #e0cdb0; padding:1rem; margin-bottom:1rem; background:#fffef9;">
+            <div class="price-edit-row">
+              <span><strong>${item.brand}</strong> - ${item.name}</span>
+              <input type="text" class="price-input" id="price_${item.id}" value="${item.price}">
+              <button class="update-btn" data-id="${item.id}" data-field="price">Update Price</button>
+            </div>
+            <div class="image-edit-row">
+              <span>Image URL</span>
+              <input type="text" class="image-input" id="img_${item.id}" value="${item.img}">
+              <button class="update-btn" data-id="${item.id}" data-field="image">Update Image</button>
+            </div>
+            <div style="text-align:right; margin-top:0.5rem;">
+              <button class="delete-btn" data-id="${item.id}">Delete Product</button>
+            </div>
+          </div>
+        `;
+      });
+      adminList.innerHTML = html;
+      
+      document.querySelectorAll('.update-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const id = parseInt(this.getAttribute('data-id'));
+          const field = this.getAttribute('data-field');
+          const product = productData.find(p => p.id === id);
+          if (!product) return;
+          if (field === 'price') {
+            const input = document.getElementById(`price_${id}`);
+            if (input && input.value.trim() !== '') {
+              product.price = input.value.trim();
+              saveData(); renderProducts();
+            }
+          } else if (field === 'image') {
+            const input = document.getElementById(`img_${id}`);
+            if (input && input.value.trim() !== '') {
+              product.img = input.value.trim();
+              saveData(); renderProducts();
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const id = parseInt(this.getAttribute('data-id'));
+          if (confirm('Delete this product? It will be removed from the shop.')) {
+            productData = productData.filter(p => p.id !== id);
+            saveData();
+            renderProducts();
+            renderAdminPanel();
+          }
+        });
+      });
+    }
+
+    const correctPassword = "12345678";
+    const adminPanel = document.getElementById('adminPanel');
+    document.getElementById('openAdminBtn').addEventListener('click', () => {
+      const password = prompt("Enter admin password:");
+      if (password === correctPassword) {
+        adminPanel.style.display = 'flex';
+        renderAdminPanel();
+      } else if (password !== null) {
+        alert("Incorrect password.");
+      }
+    });
+    document.getElementById('closeAdminBtn').addEventListener('click', () => adminPanel.style.display = 'none');
+    window.addEventListener('click', (e) => { if (e.target === adminPanel) adminPanel.style.display = 'none'; });
+
+    document.getElementById('addProductBtn').addEventListener('click', () => {
+      const name = document.getElementById('newName').value.trim();
+      const brand = document.getElementById('newBrand').value.trim();
+      const price = document.getElementById('newPrice').value.trim();
+      const desc = document.getElementById('newDesc').value.trim();
+      const image = document.getElementById('newImage').value.trim();
+      if (!name || !brand || !price) return alert('Name, Brand, and Price required.');
+      const newId = productData.length > 0 ? Math.max(...productData.map(p => p.id)) + 1 : 1;
+      productData.push({ id: newId, brand, name, price, desc: desc || '', img: image || 'https://images.unsplash.com/photo-1596040033229-a9821ebd0585?q=80&w=1974&auto=format&fit=crop' });
+      saveData(); renderProducts(); renderAdminPanel();
+      ['newName','newBrand','newPrice','newDesc','newImage'].forEach(id => document.getElementById(id).value = '');
+    });
+
+    renderProducts();
+  })();
+</script>
+</body>
+</html>
